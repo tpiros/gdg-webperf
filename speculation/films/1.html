@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="module" src="../script.mjs"></script>
+    <script defer src="../prerender-play.js"></script>
+  </head>
+  <body>
+    <h1>Wizarding World</h1>
+    <h2>Harry Potter and the Philosopher's Stone</h2>
+    <div>
+      <video
+        controls
+        muted
+        src="https://res.cloudinary.com/tamas-demo/video/upload/w_500/v1716958304/sydney.mp4"
+      ></video>
+    </div>
+    <img src="../img/1.webp" width="300" />
+    <p>
+      "Harry Potter and the Philosopher's Stone" (released as "Harry Potter and the Sorcerer's
+      Stone" in some regions) is the first film in the Harry Potter series, directed by Chris
+      Columbus. It tells the story of Harry Potter, an eleven-year-old boy who discovers he is a
+      wizard on his eleventh birthday. Harry, who has been living a mundane and sometimes miserable
+      life with his uncaring relatives, the Dursleys, is whisked away to Hogwarts School of
+      Witchcraft and Wizardry by Hagrid, the groundskeeper.
+    </p>
+
+    <p>
+      At Hogwarts, Harry makes friends, learns about his famous past and his connection to the dark
+      wizard Voldemort, who killed his parents but somehow failed to kill him as a baby. Harry,
+      along with his new friends Ron Weasley and Hermione Granger, uncovers the mystery of the
+      Philosopher's Stone, an alchemical substance with the power to grant immortality, which is
+      being sought by Voldemort to restore himself to power.
+    </p>
+    <p>
+      The trio faces various magical challenges and creatures, including a three-headed dog, a
+      deadly plant, and a life-sized game of wizard's chess. Their courage, friendship, and skills
+      are put to the test as they strive to prevent the Stone from falling into the wrong hands. The
+      film concludes with Harry thwarting Voldemort's attempt to return to power, for now, deepening
+      the enmity between them and setting the stage for the ongoing saga.
+    </p>
+    <h3 id="lcp-heading">LCP time: <span id="lcp-time"></span></h3>
+    <ul>
+      <li>
+        <span
+          >Initial script execution<span id="during-prerender" hidden=""> (during prerender)</span>:
+        </span>
+        <pre id="initial"></pre>
+      </li>
+      <li id="activation-item" hidden="">
+        <span>After activation: </span>
+        <pre id="activation"></pre>
+      </li>
+      <li id="lcp" class="">
+        <span>LCP registered: </span>
+        <pre id="lcp_list"></pre>
+      </li>
+    </ul>
+  </body>
+</html>

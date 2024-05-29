@@ -1,0 +1,135 @@
+---
+export const prerender = true;
+import photos from '../data/photos.json';
+const heroImage = photos[0];
+const cldPrefix = `https://res.cloudinary.com/tamas-demo/image/upload/`;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Travel Blog</title>
+    <script>
+      // const photos = await (await fetch('/data/photos.json')).json();
+      // console.log(photos);
+      // const heroImage = photos[0];
+      // const hero = document.getElementById('heroImage');
+      // hero.src = `/images/${heroImage.src}`;
+      // const gallery = document.getElementById('gallery');
+      // photos.forEach((photo) => {
+      //   const div = document.createElement('div');
+      //   div.className = 'flex justify-center';
+      //   div.innerHTML = `
+      //     <img
+      //       src="/images/${photo.src}"
+      //       alt="${photo.alt}"
+      //       class="w-[250px] rounded-lg shadow-xl"
+      //     />
+      //   `;
+      //   gallery.appendChild(div);
+      // });
+    </script>
+  </head>
+  <body class="bg-pastel-pink">
+    <div class="container mx-auto p-4">
+      <div class="w-[800px] mx-auto mb-4 p-4 bg-pastel-blue rounded shadow-lg">
+        <h1 class="text-2xl font-bold mb-2">Travel Blog</h1>
+        <p class="text-lg">
+          This is a collection of beautiful images. Enjoy browsing through the gallery!
+        </p>
+      </div>
+      <div class="w-full flex justify-center mb-4">
+        <img
+          src={`${cldPrefix}/w_800/f_auto,q_auto/${heroImage.publicId}`}
+          alt={heroImage.alt}
+          id="heroImage"
+          class="w-[800px] rounded-lg shadow-xl"
+        />
+        <!-- <img
+          src={`/images/${heroImage.src}`}
+          alt={heroImage.alt}
+          id="heroImage"
+          class="w-[800px] rounded-lg shadow-xl"
+        /> -->
+        <!-- <img id="heroImage" class="w-[800px] rounded-lg shadow-xl" /> -->
+      </div>
+      <div class="grid grid-cols-4 gap-x-2 gap-y-2" id="gallery">
+        {
+          photos.map((photo) => (
+            <div class="flex justify-center">
+              <!-- <img
+                src={`/images/${photo.src}`}
+                alt={photo.alt}
+                class="w-[250px] rounded-lg shadow-xl"
+              /> -->
+              <img
+              src={`${cldPrefix}/w_250/f_auto,q_auto/${photo.publicId}`}
+                alt={photo.alt}
+                class="w-[250px] rounded-lg shadow-xl"
+              />
+
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="w-[800px] mx-auto mb-4 p-4 bg-pastel-blue rounded shadow-lg">
+      <p class="p-2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis scelerisque
+        tortor, rutrum facilisis lectus aliquam sit amet. Curabitur sit amet metus et tortor pretium
+        dictum in eget nunc. Pellentesque ac dui purus. Nunc posuere erat non est semper vehicula.
+        Etiam sagittis tellus vel euismod vulputate. Curabitur tempus, turpis sit amet lacinia
+        scelerisque, nulla elit mollis felis, quis viverra dolor tortor ac mi. Proin varius erat in
+        nisl consequat, a convallis odio euismod. Interdum et malesuada fames ac ante ipsum primis
+        in faucibus. Morbi nec diam libero. Vivamus ligula eros, dapibus id mi consectetur, dapibus
+        porttitor nunc.
+      </p>
+
+      <p class="p-2">
+        Donec at nulla tincidunt, lacinia nisl nec, pulvinar leo. Quisque molestie congue magna.
+        Nullam hendrerit interdum leo, sed egestas lorem mollis nec. In vitae arcu laoreet,
+        scelerisque enim quis, scelerisque ex. Ut sit amet ullamcorper risus, vitae auctor dui.
+        Suspendisse in lectus non est cursus pretium. Ut dapibus nisi vitae tempor rhoncus. Mauris
+        sed porttitor turpis, et aliquam felis. Donec laoreet vitae nisl a dignissim. In augue
+        turpis, tincidunt non ante a, scelerisque mollis massa. Cras accumsan consectetur feugiat.
+        Donec porttitor maximus velit, sed blandit mi suscipit quis. Nam faucibus sem lectus, non
+        vestibulum odio facilisis et.
+      </p>
+
+      <p class="p-2">
+        Maecenas pellentesque quis neque et aliquam. Morbi ante diam, vestibulum et arcu sed,
+        imperdiet hendrerit nulla. Donec accumsan nulla sit amet massa rhoncus gravida. Phasellus
+        eget lectus ac elit suscipit venenatis a et felis. Nulla id lectus ipsum. Vestibulum viverra
+        cursus sagittis. Sed non vehicula mi. In in ipsum et enim viverra euismod. Suspendisse
+        aliquet tristique quam. Sed venenatis leo at ornare aliquet.
+      </p>
+
+      <p class="p-2">
+        Nullam ligula felis, elementum vel mi non, aliquam tincidunt leo. Quisque mollis augue sit
+        amet pellentesque venenatis. Phasellus laoreet et dolor id sodales. Morbi commodo metus
+        diam, ut elementum ex pharetra sit amet. Morbi molestie, velit sed molestie semper, mauris
+        orci fringilla lectus, placerat lobortis velit lectus sit amet lectus. Nam pulvinar nulla
+        quis mauris suscipit, vitae lacinia diam blandit. Integer ac mauris ullamcorper nisl egestas
+        auctor in nec ante. Vivamus a fermentum arcu. Nulla facilisi. Curabitur molestie risus vel
+        orci dapibus tempus. Nunc varius urna erat, quis sollicitudin felis bibendum sit amet.
+      </p>
+
+      <p class="p-2">
+        Ut a erat aliquet, eleifend metus quis, blandit libero. Curabitur quis orci sed turpis
+        pulvinar tempus eget at sem. Aliquam erat volutpat. Nulla facilisi. Nulla ornare, nulla a
+        venenatis hendrerit, lectus justo iaculis ante, vel elementum nunc mauris id tortor. Aliquam
+        id eros malesuada, lacinia neque id, ullamcorper orci. Aliquam id sagittis massa. Nullam id
+        vestibulum urna. Proin vitae molestie elit. Quisque pellentesque sem aliquet erat tempor
+        placerat. Fusce mollis urna nec risus aliquam luctus ac eget lacus. Cras pharetra, tortor
+        non varius sodales, leo sem lacinia leo, nec dapibus turpis orci quis dui. Integer bibendum,
+        diam sit amet imperdiet ultrices, odio nulla tempus justo, a vulputate odio lectus vitae
+        sapien. Nullam egestas tincidunt ligula nec pretium. Fusce tristique faucibus turpis, id
+        pharetra leo dapibus a.
+      </p>
+    </div>
+  </body>
+</html>

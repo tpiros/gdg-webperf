@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLS Example Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" /> -->
+    <style>
+      /* @font-face {
+        font-family: 'Montserrat-fallback';
+        size-adjust: 113.35%;
+        ascent-override: 83%;
+        src: local('Arial');
+      } */
+      body {
+        font-family: 'Montserrat', 'Montserrat-fallback', sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+        padding: 20px;
+        margin: 0;
+      }
+      h1 {
+        font-size: 2.5em;
+        color: #4b7bec;
+        text-align: center;
+      }
+      p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: #555;
+      }
+      .image-container {
+        margin: 20px 0;
+      }
+      /* #ad {
+        height: 450px;
+        width: 800px;
+        background-color: #eee;
+      }
+      #ad::before {
+        content: 'ADVERTISEMENT';
+        font-size: 10px;
+      } */
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to the CLS Example Page</h1>
+    <p>This page demonstrates various issues that can cause Cumulative Layout Shift (CLS).</p>
+
+    <div class="image-container">
+      <img src="singapore.webp" width="800" height="800" alt="Example Image" />
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p>
+      Phasellus lacinia quis sapien a condimentum. In eget purus dictum, dignissim lorem eu,
+      elementum arcu. Praesent in arcu nec orci malesuada posuere. Proin eget nisl vitae ex dapibus
+      porta. Ut tincidunt bibendum ligula, ut pulvinar lectus vehicula et. Cras non arcu et elit
+      suscipit blandit. In a scelerisque justo, at congue lectus. Vivamus suscipit sapien id purus
+      ullamcorper, vel congue mi cursus.
+    </p>
+    <div id="ad"></div>
+    <p>
+      Suspendisse potenti. Mauris bibendum hendrerit urna, sit amet fringilla felis. Donec et felis
+      eget risus laoreet vehicula. Vestibulum id lectus id lorem interdum malesuada. Nullam
+      convallis ultricies dolor, at scelerisque risus euismod non. Nulla facilisi. Nulla suscipit
+      nibh a dui tincidunt, ac cursus eros efficitur.
+    </p>
+    <p>
+      Suspendisse potenti. Mauris bibendum hendrerit urna, sit amet fringilla felis. Donec et felis
+      eget risus laoreet vehicula. Vestibulum id lectus id lorem interdum malesuada. Nullam
+      convallis ultricies dolor, at scelerisque risus euismod non. Nulla facilisi. Nulla suscipit
+      nibh a dui tincidunt, ac cursus eros efficitur.
+    </p>
+    <p>
+      Suspendisse potenti. Mauris bibendum hendrerit urna, sit amet fringilla felis. Donec et felis
+      eget risus laoreet vehicula. Vestibulum id lectus id lorem interdum malesuada. Nullam
+      convallis ultricies dolor, at scelerisque risus euismod non. Nulla facilisi. Nulla suscipit
+      nibh a dui tincidunt, ac cursus eros efficitur.
+    </p>
+    <p>
+      Suspendisse potenti. Mauris bibendum hendrerit urna, sit amet fringilla felis. Donec et felis
+      eget risus laoreet vehicula. Vestibulum id lectus id lorem interdum malesuada. Nullam
+      convallis ultricies dolor, at scelerisque risus euismod non. Nulla facilisi. Nulla suscipit
+      nibh a dui tincidunt, ac cursus eros efficitur.
+    </p>
+    <p>
+      Curabitur sit amet leo sapien. Vestibulum vestibulum, est vel scelerisque gravida, enim nisi
+      vestibulum augue, sed blandit lectus nulla a sapien. In condimentum purus vitae purus
+      scelerisque vehicula. Curabitur facilisis ligula ut est tristique, a tincidunt nisi gravida.
+      Vestibulum non bibendum erat, at volutpat lorem. Ut hendrerit euismod ligula, a scelerisque
+      nunc ullamcorper ac. Etiam porttitor mauris nec consectetur viverra.
+    </p>
+    <p>
+      Integer euismod, est non vehicula accumsan, leo nisi lacinia lorem, ut dignissim augue nulla
+      sed orci. Phasellus volutpat posuere sem. Aliquam gravida augue velit, at blandit elit
+      fermentum sit amet. Suspendisse potenti. Suspendisse viverra venenatis mi, et euismod velit
+      laoreet in. Aliquam erat volutpat. Proin accumsan euismod felis, ut venenatis risus tincidunt
+      eget. Proin ultricies nisi eget libero suscipit, nec ullamcorper lectus pretium.
+    </p>
+
+    <script>
+      // Simulate FOUT/FOIT by delaying font loading
+      setTimeout(() => {
+        const link = document.createElement('link');
+        link.href = 'https://fonts.googleapis.com/css2?family=Montserrat';
+        link.rel = 'stylesheet';
+        document.head.appendChild(link);
+      }, 3000);
+
+      // Simulate AD loading
+      setTimeout(() => {
+        const div = document.getElementById('ad');
+        const video = document.createElement('video');
+        video.src =
+          'https://res.cloudinary.com/tamas-demo/video/upload/w_800/l_text:Arial_80:BUY ME NOW/fl_layer_apply/colombia.mp4';
+        video.autoplay = true;
+        video.controls = false;
+        video.muted = true;
+        video.width = 800;
+        div.appendChild(video);
+      }, 5000);
+    </script>
+  </body>
+</html>

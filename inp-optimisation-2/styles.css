@@ -1,0 +1,182 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffdee9;
+  font-family: 'Chewy', cursive;
+  margin: 0;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+.input-box {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-family: 'Chewy', cursive;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calculate-button {
+  background-color: #b5ead7;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 2em;
+  color: #333;
+  cursor: pointer;
+  font-family: 'Chewy', cursive;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 5px;
+}
+
+.other-button {
+  background-color: #ffb3ba;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 2em;
+  color: #333;
+  cursor: pointer;
+  font-family: 'Chewy', cursive;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 5px;
+}
+
+.other-button:hover {
+  background-color: #ffdfba;
+}
+
+.calculate-button:hover {
+  background-color: #c4f0e1;
+}
+
+#result,
+#other {
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10%;
+  font-size: 2em;
+  color: white;
+  user-select: none;
+  z-index: 0;
+  animation-name: snowflake-fall, snowflake-shake;
+  animation-duration: calc(7s + (var(--i) * 1s)), calc(3s + (var(--i) * 0.5s));
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-delay: calc(var(--i) * -1s), calc(var(--i) * 0.5s);
+}
+
+@keyframes snowflake-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+@keyframes snowflake-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(var(--i) * 10px - 50%));
+  }
+}
+
+.snowflake:nth-of-type(1) {
+  left: 5%;
+  --i: 1;
+}
+.snowflake:nth-of-type(2) {
+  left: 10%;
+  --i: 3;
+}
+.snowflake:nth-of-type(3) {
+  left: 15%;
+  --i: 2;
+}
+.snowflake:nth-of-type(4) {
+  left: 20%;
+  --i: 4;
+}
+.snowflake:nth-of-type(5) {
+  left: 25%;
+  --i: 6;
+}
+.snowflake:nth-of-type(6) {
+  left: 30%;
+  --i: 5;
+}
+.snowflake:nth-of-type(7) {
+  left: 35%;
+  --i: 8;
+}
+.snowflake:nth-of-type(8) {
+  left: 40%;
+  --i: 7;
+}
+.snowflake:nth-of-type(9) {
+  left: 45%;
+  --i: 10;
+}
+.snowflake:nth-of-type(10) {
+  left: 50%;
+  --i: 9;
+}
+.snowflake:nth-of-type(11) {
+  left: 55%;
+  --i: 12;
+}
+.snowflake:nth-of-type(12) {
+  left: 60%;
+  --i: 11;
+}
+.snowflake:nth-of-type(13) {
+  left: 65%;
+  --i: 14;
+}
+.snowflake:nth-of-type(14) {
+  left: 70%;
+  --i: 13;
+}
+.snowflake:nth-of-type(15) {
+  left: 75%;
+  --i: 16;
+}
+.snowflake:nth-of-type(16) {
+  left: 80%;
+  --i: 15;
+}
+.snowflake:nth-of-type(17) {
+  left: 85%;
+  --i: 18;
+}
+.snowflake:nth-of-type(18) {
+  left: 90%;
+  --i: 17;
+}
+.snowflake:nth-of-type(19) {
+  left: 95%;
+  --i: 20;
+}
+.snowflake:nth-of-type(20) {
+  left: 98%;
+  --i: 19;
+}

@@ -1,0 +1,52 @@
+body {
+  font-family: 'IM Fell English SC', serif;
+  background-color: #fff1f3;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  font-size: 3em;
+  text-align: center;
+}
+h2 {
+  font-size: 2.5em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 2em;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+a {
+  font-size: 1.5em;
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+a:hover {
+  background-color: #ffddc1;
+  color: #000;
+}
+
+#lcp-heading {
+  font-size: 3em;
+}

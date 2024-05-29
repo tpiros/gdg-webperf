@@ -1,0 +1,42 @@
+[
+  {
+    "src": "1.jpeg",
+    "publicId": "lcp/1",
+    "alt": "Rocks by the sea (Croatia)"
+  },
+  {
+    "src": "2.jpeg",
+    "publicId": "lcp/2",
+    "alt": "Coffee plantation (Indonesia)"
+  },
+  {
+    "src": "3.jpeg",
+    "publicId": "lcp/3",
+    "alt": "Tower Bridge (United Kingdom)"
+  },
+  {
+    "src": "4.jpeg",
+    "publicId": "lcp/4",
+    "alt": "Marina Bay Sands (Singapore)"
+  },
+  {
+    "src": "5.jpeg",
+    "publicId": "lcp/5",
+    "alt": "Calle Ocho (United States)"
+  },
+  {
+    "src": "6.jpeg",
+    "publicId": "lcp/6",
+    "alt": "Palm tree by the sea (Puerto Rico)"
+  },
+  {
+    "src": "7.jpeg",
+    "publicId": "lcp/7",
+    "alt": "Colosseum (Italy)"
+  },
+  {
+    "src": "8.jpeg",
+    "publicId": "lcp/8",
+    "alt": "Sunset by the lake (Hungary)"
+  }
+]

@@ -1,0 +1,21 @@
+---
+import Layout from '../../layout/Layout.astro';
+const { id } = Astro.params;
+// export async function getStaticPaths() {
+//   const response = await fetch(`http://localhost:4000/api`);
+//   const characters = await response.json();
+//   return characters.map((character) => ({
+//     params: { id: character.id },
+//   }));
+// }
+
+const response = await fetch(`http://localhost:4000/api/${id}`);
+const character = await response.json();
+---
+
+<Layout>
+  <section class="bg-[#B8E0D2] rounded-lg shadow-lg shadow-black p-8">
+    <h1 class="text-4xl font-bold">Wizarding World 🧙🏼‍♂️</h1>
+    <h2 class="text-2xl font-bold">{character.name}</h2>
+  </section>
+</Layout>

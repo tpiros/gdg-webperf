@@ -1,0 +1,23 @@
+---
+import Layout from '../layout/Layout.astro';
+const response = await fetch(`http://localhost:4000/api`);
+const characters = await response.json();
+---
+
+<Layout>
+  <section class="bg-[#B8E0D2] rounded-lg shadow-lg shadow-black p-8">
+    <h1 class="text-4xl font-bold">Wizarding World 🧙🏼‍♂️</h1>
+    <ul class="mt-4 text-xl p-2">
+      {
+        characters.map((character) => (
+          <li
+            class="mt-4 hover:text-gray-900 transition-transform transform hover:scale-105"
+            key={character.id}
+          >
+            <a href={`characters/${character.id}`}>{character.name}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>
